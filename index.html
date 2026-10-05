@@ -253,15 +253,87 @@
     }
 
     @media (max-width: 560px) {
-      .hero { padding-left: 20px; padding-right: 20px; }
-      h1 { font-size: clamp(52px, 15.8vw, 68px); line-height: .96; }
-      .visual { height: 430px; }
-      .orange-logo { width: 330px; }
-      .expense-card { width: 88%; padding: 18px; }
+      body { -webkit-text-size-adjust: 100%; }
+      .hero {
+        gap: 16px;
+        padding: 42px 18px 58px;
+      }
+      .domain {
+        margin-bottom: 18px;
+        font-size: 14px;
+      }
+      h1 {
+        max-width: 9ch;
+        margin-bottom: 24px;
+        font-size: clamp(45px, 13.5vw, 58px);
+        line-height: .96;
+        letter-spacing: -.045em;
+      }
+      .hero-copy > p {
+        font-size: 17px;
+        line-height: 1.5;
+      }
+      .jump {
+        margin-top: 28px;
+        padding: 14px 18px;
+      }
+      .visual {
+        width: 100%;
+        height: 330px;
+      }
+      .orange-logo { width: min(76vw, 285px); }
+      .expense-card {
+        width: calc(100% - 24px);
+        max-width: 350px;
+        left: 50%;
+        bottom: 0;
+        padding: 18px;
+        transform: translateX(-50%) rotate(-2deg);
+      }
+      .expense-name { font-size: 17px; }
+      .amount { font-size: 22px; }
+      .people { margin-top: 18px; }
+      .avatar { width: 38px; height: 38px; }
       .principle, .steps, .closing { padding-left: 20px; padding-right: 20px; }
-      .step { grid-template-columns: 46px 1fr; gap: 16px 12px; }
-      .step p { grid-column: 2; }
-      .closing-bottom { align-items: flex-start; flex-direction: column; }
+      .principle { padding-top: 64px; padding-bottom: 68px; }
+      .principle-inner { gap: 12px; }
+      .section-number { font-size: 21px; }
+      h2 { font-size: 39px; }
+      .principle p {
+        margin-top: 22px;
+        font-size: 17px;
+        line-height: 1.6;
+      }
+      .steps { padding-top: 68px; padding-bottom: 76px; }
+      .steps-head { margin-bottom: 36px; }
+      .steps-head p { font-size: 16px; }
+      .step {
+        grid-template-columns: 34px minmax(0, 1fr);
+        gap: 12px 10px;
+        padding: 24px 0;
+      }
+      .step h3 { font-size: 20px; }
+      .step p {
+        grid-column: 2;
+        font-size: 15px;
+        line-height: 1.55;
+      }
+      .closing { padding-top: 64px; padding-bottom: 54px; }
+      .closing h2 { font-size: 48px; line-height: .98; }
+      .closing-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 44px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      h1 { font-size: 43px; }
+      .visual { height: 305px; }
+      .orange-logo { width: 250px; }
+      .expense-card { width: 100%; }
+      .people span:last-child { margin-left: 8px; font-size: 13px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -274,9 +346,9 @@
   <main class="page">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="domain">withsplit.app</p>
-        <h1 id="hero-title">Split the bill. Keep the friendship.</h1>
-        <p>Split with Orange keeps shared expenses clear—from the first payment to the final settle-up.</p>
+        <p class="domain">withorange.app</p>
+        <h1 id="hero-title">Split costs, not friendships.</h1>
+        <p>Add what you paid, choose who was there, and see who owes what.</p>
         <a class="jump" href="#how-it-works">See how it works
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -323,42 +395,42 @@
       <div class="principle-inner">
         <p class="section-number">01</p>
         <div>
-          <h2>One shared view. Zero mental math.</h2>
-          <p>See who paid, who joined, and what remains—all in one place. Orange keeps the numbers understandable so the group can get on with the good part.</p>
+          <h2>Everyone sees the same numbers.</h2>
+          <p>No one has to dig through old messages or redo the math. The group can see who paid, who joined, and what is still owed.</p>
         </div>
       </div>
     </section>
 
     <section class="steps" id="how-it-works" aria-labelledby="steps-title">
       <div class="steps-head">
-        <h2 id="steps-title">Simple from start to settled.</h2>
-        <p>Made for roommates, trips, dinners, and every shared plan in between.</p>
+        <h2 id="steps-title">How it works.</h2>
+        <p>Use it for rent, trips, dinner, or anything else you pay for together.</p>
       </div>
       <div class="step-list">
         <article class="step">
           <b>01</b>
           <h3>Add the expense</h3>
-          <p>Capture the total and who paid while the details are still fresh.</p>
+          <p>Enter the total and say who paid.</p>
         </article>
         <article class="step">
           <b>02</b>
           <h3>Pick the people</h3>
-          <p>Split it across the whole group or only the people who were there.</p>
+          <p>Choose the whole group or just the people who were there.</p>
         </article>
         <article class="step">
           <b>03</b>
           <h3>Settle with clarity</h3>
-          <p>Know exactly what is owed, without chasing receipts or rebuilding the math.</p>
+          <p>See exactly who owes what, then mark it paid when you are done.</p>
         </article>
       </div>
     </section>
 
     <section class="closing" aria-label="Closing message">
       <div class="closing-inner">
-        <h2>Money sorted. Plans intact.</h2>
+        <h2>All settled. No awkwardness.</h2>
         <div class="closing-bottom">
           <p>Split with Orange</p>
-          <p class="url">withsplit.app</p>
+          <p class="url">withorange.app</p>
         </div>
       </div>
     </section>
